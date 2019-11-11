@@ -1,6 +1,6 @@
 <?php
     require("config.php");
-    if($_POST['btn-entrar']){
+    if(isset($_POST['btn-entrar'])){
         include("App/controller/Login.php");
 
     }
@@ -27,6 +27,6 @@
                     <a href="problemasEntrar.php">Problemas para entrar ?</a>
             </div>
         </main>
-        <footer>© Saphir Educ 2019</footer>
+        <footer>© Saphir Educ - EAD Plataforma 2019</footer>
 </body>
 </html>

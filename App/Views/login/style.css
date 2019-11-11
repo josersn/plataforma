@@ -8,7 +8,6 @@
 main{
     height: 94vh;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     background-image: url("img/565207-PL5QY0-103.jpg");
     background-size: cover;
@@ -75,6 +74,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 300;
 }
 @media (max-width: 768px){
     main{
