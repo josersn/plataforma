@@ -1,4 +1,35 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+main{
+    padding: 2rem 5rem;
+}
+.mail{
+    width: 50%;
+    background: #f1f1ff ;
+}
+.mail .collapse {
+    background: #0c71c3;
+    border: none;
+    width: 100%;
+    color: #ffffff;
+    font-size: 14pt;
+    cursor: pointer;
+}
+.mail .content {
+    display: none;
+}
+.mail .content .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mail .content .list  a {
+    width: 90%;
+    padding: 0.5rem 2rem;
+    margin: .5px 0;
+    border: 1px solid #cecece;
 }

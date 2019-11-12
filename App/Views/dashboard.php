@@ -15,14 +15,34 @@
 </head>
 <body>
     <?php include('App/Views/header.php')?>
+    <!-- <main class="dashboard">
+        <div class="mail">
+        <button class="collapse" type="button">Caixa de Mensagens</button>
+        <div class="content" id="tab-menu">
+            <div class="list">
+            <a href="#">Bem-vindo a Saphir Educ</a>
+            <a href="#">Bem-vindo a Saphir Educ</a>
+            <a href="#">Bem-vindo a Saphir Educ</a>
+            </div>
+        </div>
+        </div>
+    </main> -->
+    
         
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
     <script>
         $(document).ready(function() {
             $("nav ul img").click(function () {
                 $(".close").slideToggle();
-            })
+            });
+
+            $(".mail .collapse").click(function() {
+                $(".mail .content").slideToggle()
+
+            });
         })
+        
     </script>
 </body>
 </html>
