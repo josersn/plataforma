@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+.container {
+    display: flex;
+    margin: 100px auto;
+    width: 800px;
+    height: 470px;
+    box-shadow: 2px 2px 4px 2px #cecece;
+}
+.col-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.col-img img {
+    width: 100%;
+}
+.col-form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 20px;
+    color: #;
+}

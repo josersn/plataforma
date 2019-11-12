@@ -12,5 +12,10 @@
             $controller = new Rotas();
             $controller ->rota($url);
         break;
+        case "admin":
+            include($rota);
+            $controller = new Rotas();
+            $controller->rota($url);
+        break;
     }
 ?>

@@ -8,6 +8,9 @@
                 case "dashboard":
                     $this->viewDashboard();
                 break;
+                case "admin";
+                    $this->viewAdmin();
+                break;
             }
         }
 
@@ -16,6 +19,9 @@
         }
         private function viewDashboard(){
             include("App/Views/dashboard.php");
+        }
+        private function viewAdmin() {
+            include("App/Views/admin.php");
         }
 }
 ?>

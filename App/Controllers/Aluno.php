@@ -16,9 +16,14 @@
      }
      public function validateStudent($nome, $email, $curso, $cpf, $dataNascimento, $contato, $segundoContanto) {
             $finalName = $this->validateNome($nome);
-            $finalEmail = $email;
+            $finalEmail = $this->validateEmail($email);
+            //criar regra de negocio para curso
             $finalCurso = $curso;
             $finalCpf = $this->validateCPF($cpf);
+            $finaldataNascimento = $this->validateCPF($dataNascimento);
+
+            echo "fuuncionou";
+            
     }
 
     public function validateNome($nome){
@@ -30,7 +35,25 @@
             ];
         }
     }
-    function validateCPF($cpf = null) {
+
+    public function validateEmail($email){
+        if(strlen($email) > 7){
+            if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                return $email;
+            }else{
+                $erros [] = [
+                    "E-mail Inválido"
+                ];
+
+            }
+        }else{
+            $erros [] = [
+                "E-mail Inválido"
+            ];
+        }
+    }
+
+    public function validateCPF($cpf = null) {
 
         if(empty($cpf)) {
             $erros [] = [
@@ -82,7 +105,25 @@
         }
     }
     
-
+    public function validateDataNascimento($dataNascimento) {
+            $data = explode("/","$dataNascimento"); // fatia a string $dat em pedados, usando / como referência
+            $d = $data[0];
+            $m = $data[1];
+            $y = $data[2];
+        
+            // verifica se a data é válida!
+            // 1 = true (válida)
+            // 0 = false (inválida)
+            $res = checkdate($m,$d,$y);
+            if ($res == 1){
+               return $res;
+            } else {
+               $erros [ ] = [
+                   "Data de nascimento "
+               ];
+            }
+        
+    }
 
 
  }
