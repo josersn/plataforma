@@ -1,4 +1,4 @@
-<?
+<?php
 include("Connect.php");
 
 class newStudent extends Connect{

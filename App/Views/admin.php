@@ -1,3 +1,13 @@
+<?php
+    if(isset($_POST['btn-admin'])){
+        require("App/Controllers/NovoAdmin.php");
+        $controller = new NovoAdmin();
+        $user = $_POST['user-admin'];
+        $senha = $_POST['senha-admin'];
+        $controller->falar();
+        // $controller->ValidateLogin($user, $senha);
+    }
+?>
 <!DOCTYPE html>
 <html lang=pt-br>
 <head>
@@ -16,14 +26,13 @@
         </div>
         <div class="col-form">
             <h1>Painel de Administração</h1>
-
+                <form action="" method="post">
+                    <input type="text" required placeholder="Usuário" name="user-admin">
+                    <input type="password" required placeholder="Senha" name="senha-admin">
+                    <button type="submit" name="btn-admin">Entrar</button>
+                </form>
         </div>
         
     </div>
 </body>
 </html>
-<!-- <form action="" method="post">
-            <input type="email" required placeholder="E-mail">
-            <input type="password" required placeholder="Senha">
-            <button type="submit" class="btn btn-admin">Entrar</button>
-        </form> -->

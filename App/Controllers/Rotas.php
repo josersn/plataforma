@@ -11,6 +11,9 @@
                 case "admin";
                     $this->viewAdmin();
                 break;
+                case "maintenance":
+                    $this->viewMaintenance();
+                break;
             }
         }
 
@@ -22,6 +25,9 @@
         }
         private function viewAdmin() {
             include("App/Views/admin.php");
+        }
+        private function viewMaintenance(){
+            include("App/Views/maintenance.php");
         }
 }
 ?>
